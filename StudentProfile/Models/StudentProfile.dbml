@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SampleDB" Class="StudentProfileDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="StudentProfile.RegisteredUsers" Member="RegisteredUsers">
+    <Type Name="RegisteredUser">
+      <Column Name="username" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="RegisteredUser_LoginHistory" Member="LoginHistories" ThisKey="username" OtherKey="username" Type="LoginHistory" />
+    </Type>
+  </Table>
+  <Table Name="StudentProfile.LoginHistory" Member="LoginHistories">
+    <Type Name="LoginHistory">
+      <Column Name="username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="is_last_login" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="last_login_date" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="RegisteredUser_LoginHistory" Member="RegisteredUser" ThisKey="username" OtherKey="username" Type="RegisteredUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="StudentProfile.Students" Member="Students">
+    <Type Name="Student">
+      <Column Name="name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="lastname" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="student_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="registration_date" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

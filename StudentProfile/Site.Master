@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="StudentProfile.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><%: Page.Title %> - Profile</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="icon" href="~/Assets/Icons/Profile.png" type="image/png" />
+    <link href="/Content/ProfileStylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <div class="navbar">
+                <a runat="server" href="Profile.aspx" class="active">Home</a>
+                <a runat="server" href="AddStudent.aspx">Add Student</a>
+                <a runat="server" href="DeleteStudent.aspx">Delete Student</a>
+                <a runat="server" href="Report.aspx">Report</a>
+            </div>
+
+            <div id="TitleContent" style="text-align: center">
+                <a runat="server" href="~/">
+                    <asp:Image ID="StudentProfileImage" runat="server" ImageUrl="~/Assets/Images/ProfilePage.png" BorderStyle="None" Height="200px" Width="200px" />
+                </a>
+                <br />
+            </div>
+
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>                
+            </div>
+
+
+        </div>
+    </form>
+</body>
+</html>
