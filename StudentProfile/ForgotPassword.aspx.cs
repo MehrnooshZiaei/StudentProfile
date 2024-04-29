@@ -30,9 +30,7 @@ namespace StudentProfile
                 {
                     using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
                     {
-                        RegisteredUser updateUserPassword = studentProfileDataContext.RegisteredUsers.Single(user => user.username == ForgotPasswordUsernameTextBox.Text);
-                        updateUserPassword.password = ForgotPasswordTextBox.Text;
-                        studentProfileDataContext.SubmitChanges();
+                        DataModification.UpdateUserPassword(studentProfileDataContext, ForgotPasswordUsernameTextBox, ForgotPasswordTextBox);
                     }
 
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('Password Updated Successfully!'); window.open('{0}'); setTimeout(window.close, 1); </script>", "Default.aspx"));
@@ -40,6 +38,7 @@ namespace StudentProfile
                 catch (Exception ex)
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "Error", String.Format("<script>alert('Username does not exists, Please check the entered username or use Sign Up page!'); </script>", true));
+                    Session.Clear();
                 }
             }
             else

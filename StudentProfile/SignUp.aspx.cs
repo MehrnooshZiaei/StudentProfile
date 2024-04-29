@@ -29,13 +29,7 @@ namespace StudentProfile
                 {
                     using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
                     {
-                        RegisteredUser newUser = new RegisteredUser
-                        {
-                            username = SignUpUsernameTextBox.Text,
-                            password = SignUpPasswordTextBox.Text
-                        };
-                        studentProfileDataContext.RegisteredUsers.InsertOnSubmit(newUser);
-                        studentProfileDataContext.SubmitChanges();
+                        DataModification.RegisterNewUser(studentProfileDataContext, SignUpUsernameTextBox, SignUpPasswordTextBox);
                     }
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('Registration Successful!'); window.open('{0}'); setTimeout(window.close, 1); </script>", "Default.aspx"));
                 } 

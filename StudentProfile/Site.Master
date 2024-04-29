@@ -9,7 +9,7 @@
     </asp:ContentPlaceHolder>
     <link rel="icon" href="~/Assets/Icons/Profile.png" type="image/png" />
     <link href="/Content/ProfileStylesheet.css" rel="stylesheet" type="text/css" />
-    <link href="/Content/stylesheet.css" rel="stylesheet" type="text/css" />
+<%--    <link href="/Content/stylesheet.css" rel="stylesheet" type="text/css" />--%>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -20,6 +20,7 @@
                 <a runat="server" href="AddStudent.aspx">Add Student</a>
                 <a runat="server" href="DeleteStudent.aspx">Delete Student</a>
                 <a runat="server" href="Report.aspx">Report</a>
+                <a runat="server" onclick="alert('Logout Successfully!'); setTimeout(window.close, 1); Session.Clear();" href="Default.aspx">Logout</a>
             </div>
 
             <div id="TitleContent" style="text-align: center">

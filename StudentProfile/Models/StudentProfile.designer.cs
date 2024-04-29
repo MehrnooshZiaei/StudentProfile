@@ -30,12 +30,12 @@ namespace StudentProfile.Models
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertRegisteredUser(RegisteredUser instance);
-    partial void UpdateRegisteredUser(RegisteredUser instance);
-    partial void DeleteRegisteredUser(RegisteredUser instance);
     partial void InsertLoginHistory(LoginHistory instance);
     partial void UpdateLoginHistory(LoginHistory instance);
     partial void DeleteLoginHistory(LoginHistory instance);
+    partial void InsertRegisteredUser(RegisteredUser instance);
+    partial void UpdateRegisteredUser(RegisteredUser instance);
+    partial void DeleteRegisteredUser(RegisteredUser instance);
     partial void InsertStudent(Student instance);
     partial void UpdateStudent(Student instance);
     partial void DeleteStudent(Student instance);
@@ -65,19 +65,19 @@ namespace StudentProfile.Models
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<RegisteredUser> RegisteredUsers
-		{
-			get
-			{
-				return this.GetTable<RegisteredUser>();
-			}
-		}
-		
 		public System.Data.Linq.Table<LoginHistory> LoginHistories
 		{
 			get
 			{
 				return this.GetTable<LoginHistory>();
+			}
+		}
+		
+		public System.Data.Linq.Table<RegisteredUser> RegisteredUsers
+		{
+			get
+			{
+				return this.GetTable<RegisteredUser>();
 			}
 		}
 		
@@ -90,196 +90,75 @@ namespace StudentProfile.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="StudentProfile.RegisteredUsers")]
-	public partial class RegisteredUser : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _username;
-		
-		private string _password;
-		
-		private EntitySet<LoginHistory> _LoginHistories;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnusernameChanging(string value);
-    partial void OnusernameChanged();
-    partial void OnpasswordChanging(string value);
-    partial void OnpasswordChanged();
-    #endregion
-		
-		public RegisteredUser()
-		{
-			this._LoginHistories = new EntitySet<LoginHistory>(new Action<LoginHistory>(this.attach_LoginHistories), new Action<LoginHistory>(this.detach_LoginHistories));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string username
-		{
-			get
-			{
-				return this._username;
-			}
-			set
-			{
-				if ((this._username != value))
-				{
-					this.OnusernameChanging(value);
-					this.SendPropertyChanging();
-					this._username = value;
-					this.SendPropertyChanged("username");
-					this.OnusernameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
-		public string password
-		{
-			get
-			{
-				return this._password;
-			}
-			set
-			{
-				if ((this._password != value))
-				{
-					this.OnpasswordChanging(value);
-					this.SendPropertyChanging();
-					this._password = value;
-					this.SendPropertyChanged("password");
-					this.OnpasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RegisteredUser_LoginHistory", Storage="_LoginHistories", ThisKey="username", OtherKey="username")]
-		public EntitySet<LoginHistory> LoginHistories
-		{
-			get
-			{
-				return this._LoginHistories;
-			}
-			set
-			{
-				this._LoginHistories.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_LoginHistories(LoginHistory entity)
-		{
-			this.SendPropertyChanging();
-			entity.RegisteredUser = this;
-		}
-		
-		private void detach_LoginHistories(LoginHistory entity)
-		{
-			this.SendPropertyChanging();
-			entity.RegisteredUser = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="StudentProfile.LoginHistory")]
 	public partial class LoginHistory : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _username;
+		private string _Username;
 		
-		private System.Nullable<bool> _is_last_login;
+		private System.Nullable<bool> _IsLastLogin;
 		
 		private int _ID;
 		
-		private string _last_login_date;
-		
-		private EntityRef<RegisteredUser> _RegisteredUser;
+		private System.DateTime _LastLoginDate;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnusernameChanging(string value);
-    partial void OnusernameChanged();
-    partial void Onis_last_loginChanging(System.Nullable<bool> value);
-    partial void Onis_last_loginChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnIsLastLoginChanging(System.Nullable<bool> value);
+    partial void OnIsLastLoginChanged();
     partial void OnIDChanging(int value);
     partial void OnIDChanged();
-    partial void Onlast_login_dateChanging(string value);
-    partial void Onlast_login_dateChanged();
+    partial void OnLastLoginDateChanging(System.DateTime value);
+    partial void OnLastLoginDateChanged();
     #endregion
 		
 		public LoginHistory()
 		{
-			this._RegisteredUser = default(EntityRef<RegisteredUser>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string username
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Username
 		{
 			get
 			{
-				return this._username;
+				return this._Username;
 			}
 			set
 			{
-				if ((this._username != value))
+				if ((this._Username != value))
 				{
-					if (this._RegisteredUser.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnusernameChanging(value);
+					this.OnUsernameChanging(value);
 					this.SendPropertyChanging();
-					this._username = value;
-					this.SendPropertyChanged("username");
-					this.OnusernameChanged();
+					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_is_last_login", DbType="Bit")]
-		public System.Nullable<bool> is_last_login
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsLastLogin", DbType="Bit")]
+		public System.Nullable<bool> IsLastLogin
 		{
 			get
 			{
-				return this._is_last_login;
+				return this._IsLastLogin;
 			}
 			set
 			{
-				if ((this._is_last_login != value))
+				if ((this._IsLastLogin != value))
 				{
-					this.Onis_last_loginChanging(value);
+					this.OnIsLastLoginChanging(value);
 					this.SendPropertyChanging();
-					this._is_last_login = value;
-					this.SendPropertyChanged("is_last_login");
-					this.Onis_last_loginChanged();
+					this._IsLastLogin = value;
+					this.SendPropertyChanged("IsLastLogin");
+					this.OnIsLastLoginChanged();
 				}
 			}
 		}
@@ -304,56 +183,156 @@ namespace StudentProfile.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_last_login_date", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
-		public string last_login_date
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginDate", DbType="DateTime NOT NULL")]
+		public System.DateTime LastLoginDate
 		{
 			get
 			{
-				return this._last_login_date;
+				return this._LastLoginDate;
 			}
 			set
 			{
-				if ((this._last_login_date != value))
+				if ((this._LastLoginDate != value))
 				{
-					this.Onlast_login_dateChanging(value);
+					this.OnLastLoginDateChanging(value);
 					this.SendPropertyChanging();
-					this._last_login_date = value;
-					this.SendPropertyChanged("last_login_date");
-					this.Onlast_login_dateChanged();
+					this._LastLoginDate = value;
+					this.SendPropertyChanged("LastLoginDate");
+					this.OnLastLoginDateChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RegisteredUser_LoginHistory", Storage="_RegisteredUser", ThisKey="username", OtherKey="username", IsForeignKey=true)]
-		public RegisteredUser RegisteredUser
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="StudentProfile.RegisteredUsers")]
+	public partial class RegisteredUser : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Username;
+		
+		private string _Password;
+		
+		private int _ID;
+		
+		private System.DateTime _RegistrationDate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnRegistrationDateChanging(System.DateTime value);
+    partial void OnRegistrationDateChanged();
+    #endregion
+		
+		public RegisteredUser()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Username
 		{
 			get
 			{
-				return this._RegisteredUser.Entity;
+				return this._Username;
 			}
 			set
 			{
-				RegisteredUser previousValue = this._RegisteredUser.Entity;
-				if (((previousValue != value) 
-							|| (this._RegisteredUser.HasLoadedOrAssignedValue == false)))
+				if ((this._Username != value))
 				{
+					this.OnUsernameChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._RegisteredUser.Entity = null;
-						previousValue.LoginHistories.Remove(this);
-					}
-					this._RegisteredUser.Entity = value;
-					if ((value != null))
-					{
-						value.LoginHistories.Add(this);
-						this._username = value.username;
-					}
-					else
-					{
-						this._username = default(string);
-					}
-					this.SendPropertyChanged("RegisteredUser");
+					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RegistrationDate", DbType="DateTime NOT NULL")]
+		public System.DateTime RegistrationDate
+		{
+			get
+			{
+				return this._RegistrationDate;
+			}
+			set
+			{
+				if ((this._RegistrationDate != value))
+				{
+					this.OnRegistrationDateChanging(value);
+					this.SendPropertyChanging();
+					this._RegistrationDate = value;
+					this.SendPropertyChanged("RegistrationDate");
+					this.OnRegistrationDateChanged();
 				}
 			}
 		}
@@ -385,30 +364,30 @@ namespace StudentProfile.Models
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _name;
+		private string _Firstname;
 		
-		private string _lastname;
+		private string _Lastname;
 		
-		private int _id;
+		private int _ID;
 		
-		private System.Nullable<int> _student_id;
+		private System.Nullable<int> _StudentID;
 		
-		private string _registration_date;
+		private System.DateTime _RegistrationDate;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void OnlastnameChanging(string value);
-    partial void OnlastnameChanged();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void Onstudent_idChanging(System.Nullable<int> value);
-    partial void Onstudent_idChanged();
-    partial void Onregistration_dateChanging(string value);
-    partial void Onregistration_dateChanged();
+    partial void OnFirstnameChanging(string value);
+    partial void OnFirstnameChanged();
+    partial void OnLastnameChanging(string value);
+    partial void OnLastnameChanged();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnStudentIDChanging(System.Nullable<int> value);
+    partial void OnStudentIDChanged();
+    partial void OnRegistrationDateChanging(System.DateTime value);
+    partial void OnRegistrationDateChanged();
     #endregion
 		
 		public Student()
@@ -416,102 +395,102 @@ namespace StudentProfile.Models
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
-		public string name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Firstname", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
+		public string Firstname
 		{
 			get
 			{
-				return this._name;
+				return this._Firstname;
 			}
 			set
 			{
-				if ((this._name != value))
+				if ((this._Firstname != value))
 				{
-					this.OnnameChanging(value);
+					this.OnFirstnameChanging(value);
 					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
+					this._Firstname = value;
+					this.SendPropertyChanged("Firstname");
+					this.OnFirstnameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lastname", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
-		public string lastname
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Lastname", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
+		public string Lastname
 		{
 			get
 			{
-				return this._lastname;
+				return this._Lastname;
 			}
 			set
 			{
-				if ((this._lastname != value))
+				if ((this._Lastname != value))
 				{
-					this.OnlastnameChanging(value);
+					this.OnLastnameChanging(value);
 					this.SendPropertyChanging();
-					this._lastname = value;
-					this.SendPropertyChanged("lastname");
-					this.OnlastnameChanged();
+					this._Lastname = value;
+					this.SendPropertyChanged("Lastname");
+					this.OnLastnameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID
 		{
 			get
 			{
-				return this._id;
+				return this._ID;
 			}
 			set
 			{
-				if ((this._id != value))
+				if ((this._ID != value))
 				{
-					this.OnidChanging(value);
+					this.OnIDChanging(value);
 					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_student_id", DbType="Int")]
-		public System.Nullable<int> student_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudentID", DbType="Int")]
+		public System.Nullable<int> StudentID
 		{
 			get
 			{
-				return this._student_id;
+				return this._StudentID;
 			}
 			set
 			{
-				if ((this._student_id != value))
+				if ((this._StudentID != value))
 				{
-					this.Onstudent_idChanging(value);
+					this.OnStudentIDChanging(value);
 					this.SendPropertyChanging();
-					this._student_id = value;
-					this.SendPropertyChanged("student_id");
-					this.Onstudent_idChanged();
+					this._StudentID = value;
+					this.SendPropertyChanged("StudentID");
+					this.OnStudentIDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_registration_date", DbType="VarChar(500)")]
-		public string registration_date
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RegistrationDate", DbType="DateTime NOT NULL")]
+		public System.DateTime RegistrationDate
 		{
 			get
 			{
-				return this._registration_date;
+				return this._RegistrationDate;
 			}
 			set
 			{
-				if ((this._registration_date != value))
+				if ((this._RegistrationDate != value))
 				{
-					this.Onregistration_dateChanging(value);
+					this.OnRegistrationDateChanging(value);
 					this.SendPropertyChanging();
-					this._registration_date = value;
-					this.SendPropertyChanged("registration_date");
-					this.Onregistration_dateChanged();
+					this._RegistrationDate = value;
+					this.SendPropertyChanged("RegistrationDate");
+					this.OnRegistrationDateChanged();
 				}
 			}
 		}
