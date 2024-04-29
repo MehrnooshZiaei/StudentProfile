@@ -29,6 +29,6 @@
     </table>
     
     <br />
-    <asp:Button runat="server" ID="AddStudentInfoButton" Text="Submit" CssClass="btn" OnClick="AddStudentInfoButton_Click"/>
+    <asp:Button runat="server" ID="AddStudentInfoButton" Text="Submit" CssClass="btn" OnClick="AddStudentInfoButton_Click" />
 
 </asp:Content>
