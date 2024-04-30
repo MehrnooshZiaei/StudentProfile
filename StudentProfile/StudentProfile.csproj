@@ -113,7 +113,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cryptography.cs" />
     <Compile Include="Models\DataModification.cs" />
+    <Compile Include="Models\DataReport.cs" />
     <Compile Include="Models\StudentProfile.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

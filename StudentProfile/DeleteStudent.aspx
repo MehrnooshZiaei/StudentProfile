@@ -5,42 +5,24 @@
     <hr />
     <h3>Here You can delete a student. Please choose the supposed student to delete</h3>
 
-    <table style="border: 1px solid black">
-        <thead>
-            <tr>
-                <th></th>
-                <th style="border: 1px solid black">Student ID</th>
-                <th style="border: 1px solid black">Firstname</th>
-                <th style="border: 1px solid black">Lastname</th>
-                <th style="border: 1px solid black">ID</th>
-                <th style="border: 1px solid black">Registration Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% foreach (StudentProfile.Models.Student student in this.RegisteredStudents)
-                { %>
-            <tr style="border: 1px solid black">
+    <asp:GridView ID="DeleteStudentsGrid" runat="server" AutoGenerateColumns="false" CellPadding="4">
+        <Columns>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:CheckBox runat="server" ID="DeleteStudentsCheckBox" />
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="StudentID" HeaderText="Student ID" />
+            <asp:BoundField DataField="Firstname" HeaderText="Firstname" />
+            <asp:BoundField DataField="Lastname" HeaderText="Lastname" />
+            <asp:BoundField DataField="ID" HeaderText="ID" />
+            <asp:BoundField DataField="RegistrationDate" HeaderText="Registration Date" />
+        </Columns>
+        <HeaderStyle BackColor="#5766CE" ForeColor="#ffffff" />
+        <RowStyle BackColor="#ffffff" />
+    </asp:GridView>
 
-                <td style="border: 1px solid black; text-align: center">
-                    <asp:CheckBox runat="server" ID="StudentsCheckBox" OnCheckedChanged="StudentsCheckBox_CheckedChanged" StudentUserID="<%=student.ID %>" /></td>
-
-                <td style="border: 1px solid black; text-align: center">
-                    <label><%=student.StudentID %></label></td>
-
-                <td style="border: 1px solid black; text-align: center">
-                    <label><%=student.Firstname %></label></td>
-
-                <td style="border: 1px solid black; text-align: center">
-                    <label><%=student.Lastname %></label></td>
-                <td style="border: 1px solid black; text-align: center" >
-                    <label><%=student.ID %></label></td>
-                <td style="border: 1px solid black; text-align: center">
-                    <label><%=student.RegistrationDate %></label></td>
-            </tr>
-            <% }%>
-        </tbody>
-    </table>
     <br />
-    <asp:Button runat="server" ID="DeleteStudentRecordButton" OnClick="DeleteStudentRecordButton_Click" Text="Delete" OnClientClick="return confirm('Are you sure to delete?');" CssClass="btn"/>
+    <asp:Button runat="server" ID="DeleteStudentRecordButton" OnClick="DeleteStudentRecordButton_Click" Text="Delete" OnClientClick="return confirm('Are you sure to delete?');" CssClass="btn" />
 
 </asp:Content>

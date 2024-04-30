@@ -29,16 +29,25 @@ namespace StudentProfile
             {
                 using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
                 {
-                    DataModification.AddStudentData(
+                    try
+                    {
+                        DataModification.AddStudentData(
                         studentProfileDataContext,
                         AddStudentFirstNameTextBox,
                         AddStudentLastNameTextBox,
                         AddStudentIDTextBox,
                         AddStudentStudentIDTextBox,
                         AddStudentRegistrationDateTextBox
-                    );
+                        );
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('Student Successfully Added!'); </script>", true));
+                    }
+                    catch (Exception ex)
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('User already been exist. Use report menu to restore the deleted user.'); </script>", true));
+                    }
+                    
                 }
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('Student Successfully Added!'); </script>", true));
+                
             }
             else
             {

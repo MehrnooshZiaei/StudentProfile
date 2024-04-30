@@ -14,10 +14,10 @@
         <elementListCompartment Id="1268d050-0174-4307-9e82-b60176724772" absoluteBounds="8.015, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="5f1c4900-2225-4723-802c-933fdbae382b" absoluteBounds="5, 4.875, 2, 1.7708968098958326">
+    <classShape Id="99c81a1c-9160-4656-9081-17045a294549" absoluteBounds="6.375, 4.75, 2, 2.1554996744791666">
       <DataClassMoniker Name="/StudentProfileDataContext/Student" />
       <nestedChildShapes>
-        <elementListCompartment Id="04ac0536-163c-4d3b-972e-9eb6bf852663" absoluteBounds="5.015, 5.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8508e968-cc02-4d14-9425-ec281c0c69eb" absoluteBounds="6.39, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

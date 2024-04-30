@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.UI.WebControls;
 
@@ -11,9 +13,9 @@ namespace StudentProfile.Models
 {
     public static class DataModification
     {
-        public static void ModifyLoginHistory (
-            StudentProfileDataContext studentProfileDataContext, 
-            bool isFirstLogin, 
+        public static void ModifyLoginHistory(
+            StudentProfileDataContext studentProfileDataContext,
+            bool isFirstLogin,
             TextBox LoginUsernameTextBox
             )
         {
@@ -33,13 +35,13 @@ namespace StudentProfile.Models
             studentProfileDataContext.SubmitChanges();
         }
 
-        public static DateTime UserLastLogin (TextBox LoginUsernameTextBox)
+        public static DateTime UserLastLogin(TextBox LoginUsernameTextBox)
         {
             var userLoginHistory = new LoginHistory();
             using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
             {
                 var previouUserRecords = studentProfileDataContext.LoginHistories.Where(user => user.Username == LoginUsernameTextBox.Text && user.IsLastLogin == false);
-                if (previouUserRecords.Any() )
+                if (previouUserRecords.Any())
                 {
                     return previouUserRecords.OrderByDescending(user => user.LastLoginDate).FirstOrDefault().LastLoginDate;
                 }
@@ -51,13 +53,21 @@ namespace StudentProfile.Models
                 }
             }
         }
-    
-        public static void RegisterNewUser (
+
+        public static void RegisterNewUser(
                 StudentProfileDataContext studentProfileDataContext,
                 TextBox SignUpUsernameTextBox,
                 TextBox SignUpPasswordTextBox
             )
         {
+            //password = PasswordCrypto.HashEncryptStringWithSalt(passwordTextBox.Password, saltValue.ToString());
+
+            //using (SHA512 shaM = new SHA512Managed())
+            //{
+            //    result = shaM.ComputeHash(SignUpPasswordTextBox.Text);
+            //}
+            
+
             RegisteredUser newUser = new RegisteredUser
             {
                 Username = SignUpUsernameTextBox.Text,
@@ -79,7 +89,7 @@ namespace StudentProfile.Models
             studentProfileDataContext.SubmitChanges();
         }
 
-        public static void AddStudentData (
+        public static void AddStudentData(
                 StudentProfileDataContext studentProfileDataContext,
                 TextBox AddStudentFirstNameTextBox,
                 TextBox AddStudentLastNameTextBox,
@@ -99,6 +109,79 @@ namespace StudentProfile.Models
 
             studentProfileDataContext.Students.InsertOnSubmit(newStudent);
             studentProfileDataContext.SubmitChanges();
+        }
+
+        public static void DeleteStudentItem(int userID)
+        {
+            using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
+            {
+                var toBeDeletedStudent = from user in studentProfileDataContext.Students where user.ID == userID select user;
+                foreach (var record in toBeDeletedStudent)
+                {
+                    //studentProfileDataContext.Students.DeleteOnSubmit(record);
+                    record.IsDeleted = true;
+                    record.DeleteDate = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                }
+                studentProfileDataContext.SubmitChanges();
+            }
+        }
+
+        public static List<Student> GetStudentsRecords()
+        {
+            List<Student> students = new List<Student>();
+            using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
+            {
+                var studentsList = from user in studentProfileDataContext.Students where !user.IsDeleted select user;
+                foreach (var record in studentsList)
+                {
+                    students.Add(new Student
+                    {
+                        StudentID = record.StudentID,
+                        ID = record.ID,
+                        Firstname = record.Firstname,
+                        Lastname = record.Lastname,
+                        RegistrationDate = record.RegistrationDate
+                    });
+                }
+            }
+            return students;
+        }
+
+        public static List<Student> GetDeletedStudentsRecords()
+        {
+            List<Student> deletedStudents = new List<Student>();
+            using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
+            {
+                var studentsList = from user in studentProfileDataContext.Students where user.IsDeleted select user;
+                foreach (var record in studentsList)
+                {
+                    deletedStudents.Add(new Student
+                    {
+                        StudentID = record.StudentID,
+                        ID = record.ID,
+                        Firstname = record.Firstname,
+                        Lastname = record.Lastname,
+                        RegistrationDate = record.RegistrationDate,
+                        DeleteDate = record.DeleteDate,
+                    });
+                }
+            }
+            return deletedStudents;
+        }
+
+        public static void RestoreStudentItem(int userID)
+        {
+            using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
+            {
+                var toBeDeletedStudent = from user in studentProfileDataContext.Students where user.ID == userID && user.IsDeleted select user;
+                foreach (var record in toBeDeletedStudent)
+                {
+                    //studentProfileDataContext.Students.DeleteOnSubmit(record);
+                    record.IsDeleted = false;
+                    record.DeleteDate = null;
+                }
+                studentProfileDataContext.SubmitChanges();
+            }
         }
     }
 }
