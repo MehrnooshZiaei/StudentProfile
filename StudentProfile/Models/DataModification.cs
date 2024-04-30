@@ -59,19 +59,11 @@ namespace StudentProfile.Models
                 TextBox SignUpUsernameTextBox,
                 TextBox SignUpPasswordTextBox
             )
-        {
-            //password = PasswordCrypto.HashEncryptStringWithSalt(passwordTextBox.Password, saltValue.ToString());
-
-            //using (SHA512 shaM = new SHA512Managed())
-            //{
-            //    result = shaM.ComputeHash(SignUpPasswordTextBox.Text);
-            //}
-            
-
+        {        
             RegisteredUser newUser = new RegisteredUser
             {
                 Username = SignUpUsernameTextBox.Text,
-                Password = SignUpPasswordTextBox.Text,
+                Password = Cryptography.Encode(SignUpPasswordTextBox.Text),
                 RegistrationDate = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")),
             };
             studentProfileDataContext.RegisteredUsers.InsertOnSubmit(newUser);
@@ -85,7 +77,7 @@ namespace StudentProfile.Models
             )
         {
             RegisteredUser updateUserPassword = studentProfileDataContext.RegisteredUsers.Single(user => user.Username == ForgotPasswordUsernameTextBox.Text);
-            updateUserPassword.Password = ForgotPasswordTextBox.Text;
+            updateUserPassword.Password = Cryptography.Encode(ForgotPasswordTextBox.Text);
             studentProfileDataContext.SubmitChanges();
         }
 

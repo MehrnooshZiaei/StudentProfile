@@ -45,7 +45,7 @@ namespace StudentProfile
                         ClientScript.RegisterStartupScript(this.GetType(), "Error", String.Format("<script>alert('Username does not exists, Please check the entered username or click on Sign Up to register new user!'); </script>", true));
                         Session.Clear();
                     }
-                    else if (!registeredUsers.Any(user => user.Password == LoginPasswordTextBox.Text))
+                    else if (!registeredUsers.Any(user => user.Password == Cryptography.Encode(LoginPasswordTextBox.Text)))
                     {
                         ClientScript.RegisterStartupScript(this.GetType(), "Error", String.Format("<script>alert('Password is not correct, Please check the entered password or click on Forgot Password to reset your password!'); </script>", true));
                     }

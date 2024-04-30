@@ -9,13 +9,13 @@ namespace StudentProfile.Models
 {
     public static class Cryptography
     {
-        public static string Encode(string password)
+        public static byte[] Encode(string password)
         {
             byte[] data = Encoding.ASCII.GetBytes(password);
 
             using (SHA256 mySHA256 = SHA256.Create())
             {
-                return Encoding.ASCII.GetString(mySHA256.ComputeHash(data));
+                return mySHA256.ComputeHash(data);
             }
         }
     }
