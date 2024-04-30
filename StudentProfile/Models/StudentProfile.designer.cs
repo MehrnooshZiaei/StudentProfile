@@ -444,6 +444,8 @@ namespace StudentProfile.Models
 		
 		private System.Data.Linq.Binary _Password;
 		
+		private string _Email;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -456,6 +458,8 @@ namespace StudentProfile.Models
     partial void OnRegistrationDateChanged();
     partial void OnPasswordChanging(System.Data.Linq.Binary value);
     partial void OnPasswordChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
     #endregion
 		
 		public RegisteredUser()
@@ -539,6 +543,26 @@ namespace StudentProfile.Models
 					this._Password = value;
 					this.SendPropertyChanged("Password");
 					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
 				}
 			}
 		}

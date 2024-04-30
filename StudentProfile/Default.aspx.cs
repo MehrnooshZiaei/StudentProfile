@@ -35,17 +35,25 @@ namespace StudentProfile
 
             if (isValid)
             {
-                Session["Username"] = LoginUsernameTextBox.Text;
+                if (LoginUsernameTextBox.Text.Contains("@"))
+                {
+                    Session["Email"] = LoginUsernameTextBox.Text;
+                }
+                else
+                {
+                    Session["Username"] = LoginUsernameTextBox.Text;
+                }
                 Session["Password"] = LoginPasswordTextBox.Text;
                 using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
                 {
                     var registeredUsers = from user in studentProfileDataContext.RegisteredUsers select user;
-                    if (!registeredUsers.Any(u => u.Username == LoginUsernameTextBox.Text))
+
+                    if (!registeredUsers.Any(u => u.Username == LoginUsernameTextBox.Text) && !registeredUsers.Any(u => u.Email == LoginUsernameTextBox.Text))
                     {
                         ClientScript.RegisterStartupScript(this.GetType(), "Error", String.Format("<script>alert('Username does not exists, Please check the entered username or click on Sign Up to register new user!'); </script>", true));
                         Session.Clear();
                     }
-                    else if (!registeredUsers.Any(user => user.Password == Cryptography.Encode(LoginPasswordTextBox.Text)))
+                    if (!registeredUsers.Any(user => user.Password == Cryptography.Encode(LoginPasswordTextBox.Text)))
                     {
                         ClientScript.RegisterStartupScript(this.GetType(), "Error", String.Format("<script>alert('Password is not correct, Please check the entered password or click on Forgot Password to reset your password!'); </script>", true));
                     }

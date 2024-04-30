@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "D:\\CodeSamples\\StudentProfile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\report.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\report.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\models\\datareport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\models\\datareport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\forgotpassword.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\forgotpassword.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\models\\cryptography.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\models\\cryptography.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\models\\studentprofile.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
-      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\models\\studentprofile.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\models\\datamodification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\models\\datamodification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\report.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\report.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\forgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\forgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\report.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\report.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\signup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\signup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\signup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\signup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,84 +62,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StudentProfile.dbml",
-              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Models\\StudentProfile.dbml",
-              "RelativeDocumentMoniker": "StudentProfile\\Models\\StudentProfile.dbml",
-              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Models\\StudentProfile.dbml",
-              "RelativeToolTip": "StudentProfile\\Models\\StudentProfile.dbml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
-              "WhenOpened": "2024-04-30T08:51:18.616Z",
+              "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Web.config",
+              "RelativeDocumentMoniker": "StudentProfile\\Web.config",
+              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Web.config",
+              "RelativeToolTip": "StudentProfile\\Web.config",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-30T12:36:45.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "ForgotPassword.aspx.cs",
+              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\ForgotPassword.aspx.cs",
+              "RelativeDocumentMoniker": "StudentProfile\\ForgotPassword.aspx.cs",
+              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\ForgotPassword.aspx.cs",
+              "RelativeToolTip": "StudentProfile\\ForgotPassword.aspx.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAwwC8AAABzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T09:23:28.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ForgotPassword.aspx",
+              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\ForgotPassword.aspx",
+              "RelativeDocumentMoniker": "StudentProfile\\ForgotPassword.aspx",
+              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\ForgotPassword.aspx",
+              "RelativeToolTip": "StudentProfile\\ForgotPassword.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-04-30T09:21:05.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SignUp.aspx.cs",
+              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\SignUp.aspx.cs",
+              "RelativeDocumentMoniker": "StudentProfile\\SignUp.aspx.cs",
+              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\SignUp.aspx.cs",
+              "RelativeToolTip": "StudentProfile\\SignUp.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T09:08:48.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SignUp.aspx",
+              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\SignUp.aspx",
+              "RelativeDocumentMoniker": "StudentProfile\\SignUp.aspx",
+              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\SignUp.aspx",
+              "RelativeToolTip": "StudentProfile\\SignUp.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-04-30T09:07:05.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Default.aspx.cs",
               "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Default.aspx.cs",
               "RelativeDocumentMoniker": "StudentProfile\\Default.aspx.cs",
               "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Default.aspx.cs",
               "RelativeToolTip": "StudentProfile\\Default.aspx.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwC8AAAB5AAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAA5wDIAAAB/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T08:44:28.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Cryptography.cs",
-              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Models\\Cryptography.cs",
-              "RelativeDocumentMoniker": "StudentProfile\\Models\\Cryptography.cs",
-              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Models\\Cryptography.cs",
-              "RelativeToolTip": "StudentProfile\\Models\\Cryptography.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T08:31:50.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "DataModification.cs",
               "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Models\\DataModification.cs",
               "RelativeDocumentMoniker": "StudentProfile\\Models\\DataModification.cs",
               "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Models\\DataModification.cs",
               "RelativeToolTip": "StudentProfile\\Models\\DataModification.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAcwFAAAAA2AAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAwwEAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T07:56:01.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DataReport.cs",
-              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Models\\DataReport.cs",
-              "RelativeDocumentMoniker": "StudentProfile\\Models\\DataReport.cs",
-              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Models\\DataReport.cs",
-              "RelativeToolTip": "StudentProfile\\Models\\DataReport.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T07:49:01.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Report.aspx.cs",
-              "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Report.aspx.cs",
-              "RelativeDocumentMoniker": "StudentProfile\\Report.aspx.cs",
-              "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Report.aspx.cs",
-              "RelativeToolTip": "StudentProfile\\Report.aspx.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAArwFwAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T06:38:01.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Report.aspx",
               "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Report.aspx",
               "RelativeDocumentMoniker": "StudentProfile\\Report.aspx",
@@ -148,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Site.Master",
               "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Site.Master",
               "RelativeDocumentMoniker": "StudentProfile\\Site.Master",
@@ -161,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Default.aspx",
               "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Default.aspx",
               "RelativeDocumentMoniker": "StudentProfile\\Default.aspx",

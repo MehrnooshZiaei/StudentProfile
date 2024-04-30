@@ -18,12 +18,8 @@
                 <asp:TextBox runat="server" ID="ForgotPasswordUsernameTextBox" CssClass="txtBox"></asp:TextBox>
                 <br />
 
-                <asp:Label runat="server">Password </asp:Label>
-                <asp:TextBox runat="server" ID="ForgotPasswordTextBox" CssClass="txtBox" TextMode="Password"></asp:TextBox>
-                <br />
-
                 <div class="btnContainer">
-                    <asp:Button runat="server" ID="SubmitBtn" CssClass="btn" OnClick="SubmitBtn_Click" Text="Submit" />
+                    <asp:Button runat="server" ID="SubmitBtn" CssClass="btn" OnClick="SubmitBtn_Click" Text="Password Recovery" />
                     <asp:Button runat="server" ID="BackToLogin" CssClass="btn" OnClick="BackToLogin_Click" Text="Back to Login" />
                 </div>
             </div>

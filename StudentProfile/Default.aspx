@@ -15,11 +15,11 @@
             <div class="login" align="center">
                 <img src="/Assets/Images/LoginPage.jpg" alt="Student Profile Login Image" width="300" height="250" />
                 <br />
-                <asp:Label runat="server">Username</asp:Label>
+                <asp:Label runat="server">Username/Email</asp:Label>
                 <asp:TextBox runat="server" ID="LoginUsernameTextBox" CssClass="txtBox" ></asp:TextBox>
                 <br />
 
-                <asp:Label runat="server" >Password </asp:Label>
+                <asp:Label runat="server" >Password </asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox runat="server" ID="LoginPasswordTextBox" CssClass="txtBox" TextMode="Password" ></asp:TextBox>
                 <br />
 

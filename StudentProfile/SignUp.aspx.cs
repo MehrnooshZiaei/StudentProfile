@@ -20,16 +20,17 @@ namespace StudentProfile
 
         protected void SubmitBtn_Click(object sender, EventArgs e)
         {
-            bool isValid = SignUpPasswordTextBox.Text != "" && SignUpUsernameTextBox.Text != ""; 
+            bool isValid = SignUpPasswordTextBox.Text != "" && SignUpUsernameTextBox.Text != "" && SignUpEmailTextBox.Text != ""; 
             if (isValid)
             {
                 Session["Username"] = SignUpUsernameTextBox.Text;
                 Session["Password"] = SignUpPasswordTextBox.Text;
+                Session["Email"] = SignUpEmailTextBox.Text;
                 try
                 {
                     using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
                     {
-                        DataModification.RegisterNewUser(studentProfileDataContext, SignUpUsernameTextBox, SignUpPasswordTextBox);
+                        DataModification.RegisterNewUser(studentProfileDataContext, SignUpUsernameTextBox, SignUpPasswordTextBox, SignUpEmailTextBox);
                     }
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('Registration Successful!'); window.open('{0}'); setTimeout(window.close, 1); </script>", "Default.aspx"));
                 } 

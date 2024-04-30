@@ -33,6 +33,15 @@ namespace StudentProfile
         protected global::System.Web.UI.WebControls.TextBox SignUpUsernameTextBox;
 
         /// <summary>
+        /// SignUpEmailTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SignUpEmailTextBox;
+
+        /// <summary>
         /// SignUpPasswordTextBox control.
         /// </summary>
         /// <remarks>

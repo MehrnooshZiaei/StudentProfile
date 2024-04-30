@@ -17,7 +17,9 @@
                 <asp:Label runat="server">Username</asp:Label>
                 <asp:TextBox runat="server" ID="SignUpUsernameTextBox" CssClass="txtBox"></asp:TextBox>
                 <br />
-
+                <asp:Label runat="server">Email</asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:TextBox runat="server" ID="SignUpEmailTextBox" CssClass="txtBox" TextMode="Email"></asp:TextBox>
+                <br />
                 <asp:Label runat="server">Password </asp:Label>
                 <asp:TextBox runat="server" ID="SignUpPasswordTextBox" CssClass="txtBox" TextMode="Password"></asp:TextBox>
                 <br />

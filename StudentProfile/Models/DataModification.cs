@@ -57,13 +57,15 @@ namespace StudentProfile.Models
         public static void RegisterNewUser(
                 StudentProfileDataContext studentProfileDataContext,
                 TextBox SignUpUsernameTextBox,
-                TextBox SignUpPasswordTextBox
+                TextBox SignUpPasswordTextBox,
+                TextBox SignUpEmailTextBox
             )
-        {        
+        {
             RegisteredUser newUser = new RegisteredUser
             {
                 Username = SignUpUsernameTextBox.Text,
                 Password = Cryptography.Encode(SignUpPasswordTextBox.Text),
+                Email = SignUpEmailTextBox.Text,
                 RegistrationDate = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")),
             };
             studentProfileDataContext.RegisteredUsers.InsertOnSubmit(newUser);
@@ -72,12 +74,12 @@ namespace StudentProfile.Models
 
         public static void UpdateUserPassword(
                 StudentProfileDataContext studentProfileDataContext,
-                TextBox ForgotPasswordUsernameTextBox,
-                TextBox ForgotPasswordTextBox
+                RegisteredUser user,
+                string newPassword
             )
         {
-            RegisteredUser updateUserPassword = studentProfileDataContext.RegisteredUsers.Single(user => user.Username == ForgotPasswordUsernameTextBox.Text);
-            updateUserPassword.Password = Cryptography.Encode(ForgotPasswordTextBox.Text);
+            RegisteredUser updateUserPassword = studentProfileDataContext.RegisteredUsers.Single(u => u.Email == user.Email);
+            updateUserPassword.Password = Cryptography.Encode(newPassword);
             studentProfileDataContext.SubmitChanges();
         }
 
