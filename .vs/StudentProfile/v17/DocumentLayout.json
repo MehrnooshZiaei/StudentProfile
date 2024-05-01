@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "D:\\CodeSamples\\StudentProfile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\report.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\report.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\forgotpassword.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\forgotpassword.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\forgotpassword.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\report.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\report.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\models\\datamodification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\forgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\forgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\forgotpassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -27,15 +27,15 @@
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\signup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\signup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\signup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|d:\\codesamples\\studentprofile\\studentprofile\\signup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|D:\\CodeSamples\\StudentProfile\\studentprofile\\signup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3141EF56-21F0-4494-9A10-1AD5C8A6AF3E}|StudentProfile\\StudentProfile.csproj|solutionrelative:studentprofile\\signup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -75,13 +75,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ForgotPassword.aspx.cs",
               "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\ForgotPassword.aspx.cs",
               "RelativeDocumentMoniker": "StudentProfile\\ForgotPassword.aspx.cs",
               "ToolTip": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\ForgotPassword.aspx.cs",
               "RelativeToolTip": "StudentProfile\\ForgotPassword.aspx.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAwwC8AAABzAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAwwDAAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T09:23:28.464Z",
               "EditorCaption": ""
@@ -109,8 +109,7 @@
               "RelativeToolTip": "StudentProfile\\SignUp.aspx.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T09:08:48.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:08:48.215Z"
             },
             {
               "$type": "Document",
@@ -135,8 +134,7 @@
               "RelativeToolTip": "StudentProfile\\Default.aspx.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAA5wDIAAAB/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T08:44:28.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T08:44:28.148Z"
             },
             {
               "$type": "Document",
@@ -148,12 +146,11 @@
               "RelativeToolTip": "StudentProfile\\Models\\DataModification.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAwwEAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T07:56:01.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T07:56:01.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Report.aspx",
               "DocumentMoniker": "D:\\CodeSamples\\StudentProfile\\StudentProfile\\Report.aspx",
               "RelativeDocumentMoniker": "StudentProfile\\Report.aspx",

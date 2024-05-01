@@ -24,13 +24,14 @@ namespace StudentProfile
         {
             if (Session["Username"] != null)
             {
-                ForgotPasswordUsernameTextBox.Text = Session["Email"].ToString();
+                ForgotPasswordUsernameTextBox.Text = Session["Username"].ToString();
             }
         }
 
         protected void SubmitBtn_Click(object sender, EventArgs e)
         {
             bool isValid = ForgotPasswordUsernameTextBox.Text != "";
+            bool isEmailSent = true;
             if (isValid)
             {
                 Session["username"] = ForgotPasswordUsernameTextBox.Text;
@@ -38,21 +39,30 @@ namespace StudentProfile
                 {
                     using (StudentProfileDataContext studentProfileDataContext = new StudentProfileDataContext(ConfigurationManager.ConnectionStrings["SampleDBConnectionString"].ConnectionString))
                     {
-                        var registeredUser = from user in studentProfileDataContext.RegisteredUsers where user.Username == ForgotPasswordUsernameTextBox.Text select user; 
+                        var registeredUser = from user in studentProfileDataContext.RegisteredUsers where user.Username == ForgotPasswordUsernameTextBox.Text select user;
                         //DataModification.UpdateUserPassword(studentProfileDataContext, ForgotPasswordUsernameTextBox, ForgotPasswordTextBox);
-                        
+
                         if (registeredUser != null)
                         {
                             RegisteredUser user = registeredUser.FirstOrDefault();
                             string newPassword = GenerateNewPassword(25);
                             string bluryEmail = user.Email.Substring(0, 4) + "***" + user.Email.Substring(user.Email.LastIndexOf('@'), (user.Email.Length - user.Email.LastIndexOf('@')));
-                            SendEMail(user.Email, newPassword, bluryEmail);
-                            DataModification.UpdateUserPassword(studentProfileDataContext, user, newPassword );
-                            ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('Password Sent to {0} Successfully! Use that to login again.'); window.open('{1}'); setTimeout(window.close, 1); </script>", $"{bluryEmail}", "Default.aspx"));
+                            try
+                            {
+                                SendEMail(user.Email, newPassword, bluryEmail);
+                            }
+                            catch(Exception ex) 
+                            {
+                                isEmailSent = false;
+                                ClientScript.RegisterStartupScript(this.GetType(), "Error", String.Format("<script>alert('Error in sending new password to {0}!'); window.open({1}); </script>", $"{bluryEmail}", "ForgotPassword.aspx"));
+                            }
+                            if (isEmailSent)
+                            {
+                                DataModification.UpdateUserPassword(studentProfileDataContext, user, newPassword);
+                                ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('Password Sent to {0} Successfully! Use that to login again.'); window.open('{1}'); setTimeout(window.close, 1); </script>", $"{bluryEmail}", "Default.aspx"));
+                            }
                         }
                     }
-                    
-                    ClientScript.RegisterStartupScript(this.GetType(), "alert", String.Format("<script>alert('Password Updated Successfully!'); window.open('{0}'); setTimeout(window.close, 1); </script>", "Default.aspx"));
                 }
                 catch (Exception ex)
                 {
@@ -74,29 +84,40 @@ namespace StudentProfile
         private void SendEMail(string email, string password, string bluryEmail)
         {
 
-            MailMessage msg = new MailMessage();
-            System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
-            try
+            //MailMessage msg = new MailMessage();
+            //System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
+
+            //msg.Subject = "Reset Password";
+            //msg.Body = $"Your new password is: {password} ";
+            //msg.From = new MailAddress("mehrnooshziaei2@gmail.com");
+            //msg.To.Add(email);
+            //msg.IsBodyHtml = true;
+            //client.Host = "smtp.gmail.com";
+            //System.Net.NetworkCredential basicauthenticationinfo = new System.Net.NetworkCredential("mehrnooshziaei2@gmail.com", "3bnV0Z$3%SeYpRd");
+            //client.Port = int.Parse("587");
+            //client.EnableSsl = true;
+            //client.UseDefaultCredentials = false;
+            //client.Credentials = basicauthenticationinfo;
+            //client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            //client.Send(msg);
+
+            using (MailMessage mail = new MailMessage())
             {
-                msg.Subject = "Reset Password";
-                msg.Body = $"Your new password is: {password} ";
-                msg.From = new MailAddress("mehrnooshziaei2@gmail.com");
-                msg.To.Add(email);
-                msg.IsBodyHtml = true;
-                client.Host = "smtp.gmail.com";
-                System.Net.NetworkCredential basicauthenticationinfo = new System.Net.NetworkCredential("mehrnooshziaei2@gmail.com", "3bnV0Z$3%SeYpRd");
-                client.Port = int.Parse("587");
-                client.EnableSsl = true;
-                client.UseDefaultCredentials = false;
-                client.Credentials = basicauthenticationinfo;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.Send(msg);
+                mail.From = new MailAddress("mehrnooshziaei2@gmail.com");
+                mail.To.Add(email);
+                mail.Subject = "Reset Password";
+                mail.Body = $"Your new password is: {password} ";
+                mail.IsBodyHtml = true;
+                //mail.Attachments.Add(new Attachment("C:\\file.zip"));
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("mehrnooshziaei2@gmail.com", "3bnV0Z$3%SeYpRd");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
             }
-            catch (Exception ex)
-            {
-                //throw ExceptionHelper.CreateException(ex);
-                ClientScript.RegisterStartupScript(this.GetType(), "Error", String.Format("<script>alert('Error in sending new password to {0}!'); window.open({1}); </script>", $"{bluryEmail}", "ForgotPassword.aspx"));
-            }
+
         }
 
         private string GenerateNewPassword(int passLength)
